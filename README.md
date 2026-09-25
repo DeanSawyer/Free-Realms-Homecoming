@@ -1,7 +1,3 @@
-<p align="center">
-  <img src="res/OSFR.png" alt="Open Source Free Realms logo">
-</p>
-
 # Free Realms Homecoming
 
 Free Realms Homecoming is a community fork of [Open Source Free Realms](https://github.com/Open-Source-Free-Realms/OpenSourceFreeRealms), an experimental server emulator for the original **Free Realms PC client**.
