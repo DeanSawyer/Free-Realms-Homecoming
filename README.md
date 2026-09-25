@@ -1,34 +1,33 @@
-<p align="center"><img src="res/OSFR.png"></p>
-
 <p align="center">
-    <a href="https://github.com/Open-Source-Free-Realms/OpenSourceFreeRealms/releases"><img src="https://img.shields.io/github/v/release/OpenFreeRealms/OpenFreeRealms?style=for-the-badge"></a>
-    <a href="https://discord.gg/Zu5mCyDVaB"><img src="https://img.shields.io/badge/chat-on%20discord-7289da.svg?logo=discord&style=for-the-badge" alt="Discord"></a>
-    <img src="https://img.shields.io/github/downloads/OpenFreeRealms/OpenFreeRealms/total?style=for-the-badge">
-    
+  <img src="res/OSFR.png" alt="Open Source Free Realms logo">
 </p>
 
-<p align="center">
-Open Source Free Realms is a reversed engineered walking emulator for a now sunset game called Free Realms!
-</p>
+# Free Realms Homecoming
 
-# Installation
- - Download the new OSFR server from the releases tab: https://github.com/Open-Source-Free-Realms/OpenSourceFreeRealms/releases
+Free Realms Homecoming is a community fork of [Open Source Free Realms](https://github.com/Open-Source-Free-Realms/OpenSourceFreeRealms), an experimental server emulator for the original **Free Realms PC client**.
 
- - Open the "OSFR Server" folder, start up "OFRServer" (Optionally you can create a shortcut for it), Accept all firewall rules that pop-up.
+## Current status
 
- - Open the "OSFR Client" folder, locate "FreeRealms.bat" and start it up (Optionally you can create a shortcut for it).
+This repository contains an early walking emulator. It is a starting point for restoring more of the game, but it is not a complete or ready-to-play Free Realms server.
 
- - Enjoy walking around!
+This is a separate project from the PS3 bootstrap and the newer Sanctuary server.
 
-# Customization
-You can freely customize your character within the PacketSendSelfToClient.json and ClientItemDefinitions.json
-These 2 documents are half documented so feel free to explore yourself or ask on the discord.
+## What's in this repository
 
-# Tasks
-- [x] Fix Disconnects with the current library
-- [ ] [Revamp Server Module](https://github.com/OpenFreeRealms/OpenFreeRealms/issues/3)
-- [ ] Continue mapping SendSelf and ItemDefinitions
+- `ofrserver/Server.sln` — Visual Studio solution
+- `ofrserver/Gateway/` — login, player, chat, map, and NPC code
+- `ofrserver/Customize/` — character and item definitions
+- `ofrserver/Packets/` — archived packet captures for research
+- `res/` — project artwork
 
-This project has no affiliation with Daybreak Games. All rights and intellectual property belong to them.
+## Building from source
 
-This is a standalone project that allows anyone to help. Our main goal is to get a working stable singleplayer emulator out so everyone can enjoy Sacred Grove again.
+The server projects target **.NET Framework 4.8**. On Windows, open `ofrserver/Server.sln` in Visual Studio with the .NET Framework 4.8 targeting pack installed, restore dependencies, and build the solution.
+
+Server settings are in `ofrserver/Config.json` and `ofrserver/Server/Config.json`. A compatible Free Realms PC client is required to connect.
+
+The [original project's releases](https://github.com/Open-Source-Free-Realms/OpenSourceFreeRealms/releases) are available for reference. They are historical upstream releases, not builds of this fork.
+
+## Credits
+
+Free Realms Homecoming builds on the work of the [Open Source Free Realms contributors](https://github.com/Open-Source-Free-Realms/OpenSourceFreeRealms). Free Realms belongs to its respective rights holders. This is an independent fan project.
